@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skin-First Stylist</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header>
+            <h1>✨ Skin-First Stylist</h1>
+            <p>Your outfit, optimized for your skin — today.</p>
+        </header>
+
+        <!-- Step 1: Upload Photo -->
+        <section id="step-upload">
+            <h2>Step 1: Upload Your Selfie</h2>
+            <div class="upload-zone" id="uploadZone">
+                <p>📸 Drag & drop or click to upload</p>
+                <input type="file" id="photoInput" accept="image/*" hidden />
+            </div>
+            <div id="previewContainer" style="display:none;">
+                <img id="previewImage" alt="Your selfie" />
+                <button id="analyzeBtn">🔍 Analyze My Skin</button>
+            </div>
+        </section>
+
+        <!-- Step 2: Skin Results -->
+        <section id="step-results" style="display:none;">
+            <h2>Step 2: Your Skin Analysis</h2>
+            <div id="skinScores"></div>
+            <div id="recommendations">
+                <h3>👗 Outfit Recommendations</h3>
+                <p id="recReason"></p>
+                <div id="recColors"></div>
+                <div id="recStyles"></div>
+            </div>
+            <button id="tryOnBtn">👀 Try On an Outfit</button>
+        </section>
+
+        <!-- Step 3: Virtual Try-On -->
+        <section id="step-tryon" style="display:none;">
+            <h2>Step 3: Virtual Try-On</h2>
+            <div class="tryon-grid">
+                <div>
+                    <h4>Garment Options</h4>
+                    <div id="garmentOptions"></div>
+                </div>
+                <div>
+                    <h4>Preview</h4>
+                    <div id="tryonResult">
+                        <p>Select a garment to preview</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Built with ❤️ using YouCam API · Hack the Arts 2026</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
